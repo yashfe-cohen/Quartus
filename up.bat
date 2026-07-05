@@ -8,7 +8,7 @@ echo.
 echo ===================================================
 echo Step 2: Saving a local version (Commit)...
 echo ===================================================
-git commit -m "Auto backup via up.bat"
+git commit -m "Auto backup via fast_beckup.bat"
 
 echo.
 echo ===================================================
