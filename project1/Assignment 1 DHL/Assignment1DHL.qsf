@@ -32,7 +32,9 @@ set_global_assignment -name FAMILY "Agilex 5"
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/questa/Assignment1DHL.vt
 set_global_assignment -name VERILOG_FILE Assignment1DHL.v
 set_global_assignment -name VERILOG_FILE Verilog2.v
 set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
 set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL

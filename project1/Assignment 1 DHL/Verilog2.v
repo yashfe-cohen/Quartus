@@ -1,35 +1,27 @@
-`timescale 1ns / 1ps // הגדרת יחידות הזמן של הסימולציה
+`timescale 1ns / 1ps
 
 module verilog2;
 
-    // הגדרת אותות לבדיקה
-    reg tb_in;        // כניסה לרכיב (מוגדרת כ-reg כי אנחנו משנים אותה בבלוק initial)
-    wire tb_out;      // מוצא מהרכיב
+    reg tb_in;        
+    wire tb_out;      
 
-    // חיבור הרכיב הנבדק (UUT - Unit Under Test)
     Assignment1DHL uut (
         .in_bit(tb_in),
         .out_bit(tb_out)
     );
 
-    // תהליך הבדיקה
     initial begin
-        // תצוגת טקסט בטרמינל של הסימולציה בכל שינוי אות
         $monitor("Time = %0t | Input = %b | Output = %b", $time, tb_in, tb_out);
 
-        // מקרה בדיקה 1: כניסה '0'
         tb_in = 1'b0;
-        #10; // המתנה של 10 יחידות זמן
+        #10; 
         
-        // מקרה בדיקה 2: כניסה '1'
         tb_in = 1'b1;
         #10;
         
-        // מקרה בדיקה 3: חזרה ל-'0'
         tb_in = 1'b0;
         #10;
 
-        // סיום הסימולציה
         $finish;
     end
 
