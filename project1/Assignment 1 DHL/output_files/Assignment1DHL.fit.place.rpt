@@ -1,0 +1,145 @@
+Fitter Place Stage Report for Assignment1DHL
+Mon Jul  6 08:28:27 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Resource Usage Summary
+  3. Fitter Resource Utilization by Entity
+  4. Place Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++--------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                        ;
++-------------------------------------------------------------+----------------+-------+
+; Resource                                                    ; Usage          ; %     ;
++-------------------------------------------------------------+----------------+-------+
+; Usage Report Generated after: Place                         ;                ;       ;
+;                                                             ;                ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 0 / 222,400    ; 0 %   ;
+; ALMs needed [=A-B+C]                                        ; 0              ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 0 / 222,400    ; 0 %   ;
+;         [a] ALMs used for LUT logic and register circuitry  ; 0              ;       ;
+;         [b] ALMs used for LUT logic                         ; 0              ;       ;
+;         [c] ALMs used for register circuitry                ; 0              ;       ;
+;         [d] ALMs used for memory (up to half of total ALMs) ; 0              ;       ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 222,400    ; 0 %   ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 222,400    ; 0 %   ;
+;         [a] Due to location constrained logic               ; 0              ;       ;
+;         [b] Due to LAB-wide signal conflicts                ; 0              ;       ;
+;         [c] Due to LAB input limits                         ; 0              ;       ;
+;         [d] Due to virtual I/Os                             ; 0              ;       ;
+;                                                             ;                ;       ;
+; Difficulty packing design                                   ; Low            ;       ;
+;                                                             ;                ;       ;
+; Total LABs:  partially or completely used                   ; 0 / 22,240     ; 0 %   ;
+;     -- Logic LABs                                           ; 0              ;       ;
+;     -- Memory LABs (up to half of total LABs)               ; 0              ;       ;
+;                                                             ;                ;       ;
+; Combinational ALUT usage for logic                          ; 0              ;       ;
+;     -- 8 input functions                                    ; 0              ;       ;
+;     -- 7 input functions                                    ; 0              ;       ;
+;     -- 6 input functions                                    ; 0              ;       ;
+;     -- 5 input functions                                    ; 0              ;       ;
+;     -- 4 input functions                                    ; 0              ;       ;
+;     -- <=3 input functions                                  ; 0              ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0              ;       ;
+;                                                             ;                ;       ;
+; Dedicated logic registers                                   ; 0              ;       ;
+;     -- By type:                                             ;                ;       ;
+;         -- LAB logic registers:                             ;                ;       ;
+;             -- Primary logic registers                      ; 0 / 444,800    ; 0 %   ;
+;             -- Secondary logic registers                    ; 0 / 444,800    ; 0 %   ;
+;         -- Hyper-Registers:                                 ; 0              ;       ;
+;                                                             ;                ;       ;
+; Register control circuitry for power estimation             ; 0              ;       ;
+;                                                             ;                ;       ;
+; ALMs adjustment for power estimation                        ; 0              ;       ;
+;                                                             ;                ;       ;
+; I/O pins                                                    ; 2 / 628        ; < 1 % ;
+;     -- Clock pins                                           ; 0 / 46         ; 0 %   ;
+;     -- Dedicated input pins                                 ; 3 / 54         ; 6 %   ;
+;                                                             ;                ;       ;
+; M20K blocks                                                 ; 0 / 1,611      ; 0 %   ;
+; Total MLAB memory bits                                      ; 0              ;       ;
+; Total block memory bits                                     ; 0 / 32,993,280 ; 0 %   ;
+;                                                             ;                ;       ;
+; DSP Blocks Needed [=A+B+C-D]                                ; 0 / 846        ; 0 %   ;
+;     [A] Total Fixed Point DSP Blocks                        ; 0              ;       ;
+;     [B] Total Floating Point DSP Blocks                     ; 0              ;       ;
+;     [C] Total DSP_PRIME Blocks                              ; 0              ;       ;
+;     [D] Estimate of DSP Blocks recoverable by dense merging ; 0              ;       ;
+;                                                             ;                ;       ;
+; IOPLLs                                                      ; 0 / 15         ; 0 %   ;
+; Global signals                                              ; 0              ;       ;
+; LVDS_RX blocks                                              ; 0 / 192        ; 0 %   ;
+; HMC blocks                                                  ; 0 / 8          ; 0 %   ;
+; Maximum fan-out                                             ; 1              ;       ;
+; Highest non-global fan-out                                  ; 1              ;       ;
+; Total fan-out                                               ; 19             ;       ;
+; Average fan-out                                             ; 0.63           ;       ;
++-------------------------------------------------------------+----------------+-------+
+The Fitter Resource Usage Summary report displays a detailed analysis of logic utilization based on calculations of ALM usage. Refer to <a class="xref" href="https://www.intel.com/content/www/us/en/programmable/quartushelp/current/index.htm#mapIdTopics/mwh1465496451103.htm" target="_blank">Fitter Resource Usage Summary Report</a> in the <i>Intel® Quartus® Prime Pro Edition Help</i> for more information.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+--------------------------+----------------------------------------+---------------------------------------------------+------+--------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M20Ks ; DSP Blocks needed [=A-B] ; [A] DSP Blocks used in final placement ; [B] Estimate of DSPs recoverable by dense merging ; Pins ; IOPLLs ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+--------------------------+----------------------------------------+---------------------------------------------------+------+--------+---------------------+----------------+--------------+
+; |                          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0                        ; 0                                      ; 0                                                 ; 4    ; 0 (0)  ; |                   ; Assignment1DHL ; altera_work  ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+--------------------------+----------------------------------------+---------------------------------------------------+------+--------+---------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------+
+; Place Messages ;
++----------------+
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Mon Jul  6 08:24:40 2026
+    Info: System process ID: 9548
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off Assignment1DHL -c Assignment1DHL
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = Assignment1DHL
+Info: Revision = Assignment1DHL
+Info (11165): Fitter preparation operations ending: elapsed time is 00:02:01
+Info (18252): The Fitter is using Physical Synthesis.
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:00:00
+Info (22300): Design uses Placement Effort Multiplier = 0.8.
+Info (170189): Fitter placement preparation operations beginning
+Info (11888): Total time spent on timing analysis during Physical Synthesis is 0.00 seconds.
+Info (22300): Design uses Placement Effort Multiplier = 0.8.
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during Placement is 0.00 seconds.
+
+

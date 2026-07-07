@@ -1,0 +1,272 @@
+Logic Generation Report
+Mon Jul  6 08:40:44 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Flow Summary
+  2. Flow Settings
+  3. Flow Non-Default Global Settings
+  4. Flow Elapsed Time
+  5. Flow OS Summary
+  6. Flow Log
+  7. Legal Notice
+  8. Settings
+  9. Generation Stages
+ 10. Logic Generation Tool Settings
+ 11. Logic Generation Tool Detected IP Report
+ 12. Logic Generation Tool Dual Simplex User Assignment Report
+ 13. Logic Generation Tool Dual Simplex IP Configuration Report
+ 14. Logic Generation Tool Dual Simplex IP Report
+ 15. Logic Generation Tool Dynamic Reconfiguration User Assignment Report
+ 16. Logic Generation Tool Dynamic Reconfiguration IP Configuration Report
+ 17. Logic Generation Tool Dynamic Reconfiguration IP Report
+ 18. Flow Messages
+ 19. Flow Suppressed Messages
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Mon Jul  6 08:40:42 2026      ;
+; Quartus Prime Version           ; 26.1.0 Build 110 03/26/2026 SC Pro Edition ;
+; Revision Name                   ; Assignment1DHL                             ;
+; Top-level Entity Name           ; Assignment1DHL                             ;
+; Family                          ; Agilex 5                                   ;
+; Device                          ; A5EC065BB32AE4S                            ;
+; Timing Models                   ; Final                                      ;
+; Power Models                    ; Final                                      ;
+; Device Status                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 0 / 222,400 ( 0 % )                        ;
+; Total dedicated logic registers ; 0                                          ;
+; Total pins                      ; 2 / 628 ( < 1 % )                          ;
+; Total block memory bits         ; 0 / 32,993,280 ( 0 % )                     ;
+; Total RAM Blocks                ; 0 / 1,611 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 1,692 ( 0 % )                          ;
+; Total GTS Transceiver Channels  ; 0 / 24 ( 0 % )                             ;
+; Total HSSI Ethernet Channels    ; 0 / 6 ( 0 % )                              ;
+; Total HSSI PCIEs                ; 0 / 6 ( 0 % )                              ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                             ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/06/2026 08:24:28 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Assignment1DHL      ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++--------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name          ; Value                                                         ; Default Value ; Entity Name ; Section Id ;
++--------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID    ; 345052807176.178331546803888                                  ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP   ; 100                                                           ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP   ; 0                                                             ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY ; C:/Users/noone/Quartus/project1/Assignment 1 DHL/output_files ; --            ; --          ; --         ;
++--------------------------+---------------------------------------------------------------+---------------+-------------+------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                        ;
++-----------------------------------------------------+--------------+---------------------+
+; Module Name                                         ; Elapsed Time ; Peak Virtual Memory ;
++-----------------------------------------------------+--------------+---------------------+
+; Synthesis (Analysis & Elaboration, Logic Synthesis) ; 00:00:11     ; 825 MB              ;
+; Fitter                                              ; 00:07:13     ; 5460 MB             ;
+; Timing Analyzer                                     ; 00:00:15     ; 1062 MB             ;
+; Assembler                                           ; 00:01:21     ; 1094 MB             ;
+; Logic Generation Tool                               ; 00:00:01     ; 449 MB              ;
+; Logic Generation Tool                               ; 00:00:01     ; 449 MB              ;
+; Total                                               ; 00:09:02     ; --                  ;
++-----------------------------------------------------+--------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                                   ;
++-----------------------------------------------------+------------------+------------+------------+----------------+
+; Module Name                                         ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-----------------------------------------------------+------------------+------------+------------+----------------+
+; Synthesis (Analysis & Elaboration, Logic Synthesis) ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Fitter                                              ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Timing Analyzer                                     ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Assembler                                           ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Logic Generation Tool                               ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
+; Logic Generation Tool                               ; DESKTOP-PV3BVLH  ; Windows 11 ; 10.0.26200 ; x86_64         ;
++-----------------------------------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off --analysis_and_elaboration Assignment1DHL -c Assignment1DHL --synthesis
+quartus_fit --read_settings_files=on --write_settings_files=off Assignment1DHL -c Assignment1DHL
+quartus_sta Assignment1DHL -c Assignment1DHL --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off Assignment1DHL -c Assignment1DHL
+quartus_tlg --tool=hssi_support_logic --read_settings_files=on --write_settings_files=off --skip_quick_elaboration Assignment1DHL -c Assignment1DHL
+quartus_tlg --tool=hssi_support_logic --read_settings_files=on --write_settings_files=off --skip_quick_elaboration Assignment1DHL -c Assignment1DHL
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------+
+; Settings                                      ;
++------------------------+----------------------+
+; Option                 ; Setting              ;
++------------------------+----------------------+
+; IP Regeneration Policy ; Never Regenerate IPs ;
+; Generation Skipped     ; Yes                  ;
++------------------------+----------------------+
+
+
++------------------------------------+
+; Generation Stages                  ;
++-----------------+------------------+
+; Stage           ; Elapsed Time (s) ;
++-----------------+------------------+
+; Qsys Validation ; 0                ;
+; Qsys Generation ; 0                ;
++-----------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Logic Generation Tool Settings                                                                     ;
++------------------------------------------------------------------+-----------------+---------------+
+; Option                                                           ; Setting         ; Default Value ;
++------------------------------------------------------------------+-----------------+---------------+
+; Device                                                           ; A5EC065BB32AE4S ;               ;
+; Maximum number of parallel out-of-context synthesis jobs         ; Auto            ; Auto          ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On              ; On            ;
+; Enable compact report table                                      ; Off             ; Off           ;
+; Design Assistant include IP blocks                               ; Off             ; Off           ;
+; High fanout net threshold for RAM inference                      ; 15              ; 15            ;
+; Design Assistant limit on reported violations per rule           ; 5000            ; 5000          ;
++------------------------------------------------------------------+-----------------+---------------+
+
+
++--------------------------------+
+; Logic Generation Tool Messages ;
++--------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Logic Generation Tool
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Mon Jul  6 08:40:41 2026
+    Info: System process ID: 5580
+Info: Command: quartus_tlg --tool=hssi_support_logic --read_settings_files=on --write_settings_files=off --skip_quick_elaboration Assignment1DHL -c Assignment1DHL
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_dr_tool_script.tcl
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_ds_tool_script.tcl
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_hssi_ip_tool_script.tcl
+Info: Launching tool main function hssi_support_logictool_main
+Info: Quartus Prime Logic Generation Tool was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 449 megabytes
+    Info: Processing ended: Mon Jul  6 08:40:44 2026
+    Info: Elapsed time: 00:00:03
+    Info: System process ID: 5580
+
+
++---------------------------------------------------------------------------------+
+; Logic Generation Tool Detected IP Report                                        ;
++----+--------------------+--------------+---------+----------+-------------------+
+; IP ; Number of Channels ; IP Direction ; IP Type ; FEC Used ; Tool(s) Supported ;
++----+--------------------+--------------+---------+----------+-------------------+
+
+
++-----------------------------------------------------------+
+; Logic Generation Tool Dual Simplex User Assignment Report ;
++--------------+-------+------------------+-----------------+
+; QSF Settings ; Value ; Applied Instance ; Applied Group   ;
++--------------+-------+------------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Logic Generation Tool Dual Simplex IP Configuration Report                    ;
++----------+-------------+------------------+-------------------+---------------+
+; DS Group ; Assigned IP ; User IP instance ; Relative Location ; Loopback Mode ;
++----------+-------------+------------------+-------------------+---------------+
+
+
++----------------------------------------------------------------------------+
+; Logic Generation Tool Dual Simplex IP Report                               ;
++-----------------+------------+--------------+---------+----------+---------+
+; Dual Simplex IP ; IP Channel ; IP Direction ; IP Type ; FEC Used ; IP File ;
++-----------------+------------+--------------+---------+----------+---------+
+
+
++----------------------------------------------------------------------+
+; Logic Generation Tool Dynamic Reconfiguration User Assignment Report ;
++--------------+-------+------------------+----------------------------+
+; QSF Settings ; Value ; Applied Instance ; Applied Group              ;
++--------------+-------+------------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Logic Generation Tool Dynamic Reconfiguration IP Configuration Report ;
++----------+-------------+------------------+---------------------------+
+; DR Group ; Assigned IP ; User IP instance ; Relative Location         ;
++----------+-------------+------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Logic Generation Tool Dynamic Reconfiguration IP Report                                                               ;
++---------+--------------------+--------------+-----------+-----------+-----------------+----------+--------------------+
+; IP Name ; Number of channels ; Combinations ; MIF Depth ; MIF Width ; Generation Mode ; MIF File ; Instantiation File ;
++---------+--------------------+--------------+-----------+-----------+-----------------+----------+--------------------+
+
+
++---------------+
+; Flow Messages ;
++---------------+
+Can't read Quartus Prime message file C:/Users/noone/Quartus/project1/Assignment 1 DHL/qdb/_compiler/Assignment1DHL/_flat/26.1.0/legacy/1/Flow Messages are not contained in a QMSG file..
+Make sure the file exists and is up to date, and you have permission to read and write the file.
+Info: *******************************************************************
+Info: Running Quartus Prime Logic Generation Tool
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Mon Jul  6 08:40:41 2026
+    Info: System process ID: 5580
+Info: Command: quartus_tlg --tool=hssi_support_logic --read_settings_files=on --write_settings_files=off --skip_quick_elaboration Assignment1DHL -c Assignment1DHL
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_dr_tool_script.tcl
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_ds_tool_script.tcl
+Info: Loading c:/altera_pro/26.1/quartus/common/tcl/internal/qtlg_hssi_ip_tool_script.tcl
+Info: Launching tool main function hssi_support_logictool_main
+Info: Quartus Prime Logic Generation Tool was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 449 megabytes
+    Info: Processing ended: Mon Jul  6 08:40:44 2026
+    Info: Elapsed time: 00:00:03
+    Info: System process ID: 5580
+
+
++--------------------------+
+; Flow Suppressed Messages ;
++--------------------------+
+Please use Quartus Prime to view the suppressed messages.
+
+

@@ -1,0 +1,60 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim
+vAssignment1DHL
+!s110 1783343225
+!i10b 1
+!s100 4MI7Ok>ja9A91I1GfAT3W0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0GX3@9N>b]RNMHdE;nn;?0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1783315462
+8C:/Users/noone/Quartus/project1/Assignment 1 DHL/Assignment1DHL.v
+FC:/Users/noone/Quartus/project1/Assignment 1 DHL/Assignment1DHL.v
+!i122 0
+L0 1 9
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1783343224.000000
+!s107 C:/Users/noone/Quartus/project1/Assignment 1 DHL/Assignment1DHL.v|
+!s90 -reportprogress|300|-work|work|+incdir+C:/Users/noone/Quartus/project1/Assignment+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/1+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/DHL+C:/Users/noone/Quartus/project1/Assignment 1 DHL|C:/Users/noone/Quartus/project1/Assignment 1 DHL/Assignment1DHL.v|
+!i113 1
+Z4 o-work work
+Z5 !s92 -work work {+incdir+C:/Users/noone/Quartus/project1/Assignment+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/1+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/DHL+C:/Users/noone/Quartus/project1/Assignment 1 DHL}
+Z6 tCvgOpt 0
+n@assignment1@d@h@l
+vverilog2
+!s110 1783343226
+!i10b 1
+!s100 zXmA<nYX12`PUb0=fEOQC3
+R1
+IbzL4F[oXV1_1M1R`Yj?iG2
+R2
+R0
+w1783343182
+8C:/Users/noone/Quartus/project1/Assignment 1 DHL/Verilog2.v
+FC:/Users/noone/Quartus/project1/Assignment 1 DHL/Verilog2.v
+!i122 1
+L0 3 34
+R3
+r1
+!s85 0
+31
+!s108 1783343226.000000
+!s107 C:/Users/noone/Quartus/project1/Assignment 1 DHL/Verilog2.v|
+!s90 -reportprogress|300|-work|work|+incdir+C:/Users/noone/Quartus/project1/Assignment+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/1+C:/Users/noone/Quartus/project1/Assignment 1 DHL/simulation/questa/rtlsim/DHL+C:/Users/noone/Quartus/project1/Assignment 1 DHL|C:/Users/noone/Quartus/project1/Assignment 1 DHL/Verilog2.v|
+!i113 1
+R4
+R5
+R6

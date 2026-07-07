@@ -1,0 +1,101 @@
+Fitter Finalize Stage Report for Assignment1DHL
+Mon Jul  6 08:31:52 2026
+Quartus Prime Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Routing Usage Summary
+  3. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2026  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------+
+; Routing Usage Summary                                          ;
++--------------------------------------+-------------------------+
+; Routing Resource Type                ; Usage                   ;
++--------------------------------------+-------------------------+
+; Block Input Mux Wrapbacks            ; 0 / 197,400 ( 0 % )     ;
+; Block Input Muxes                    ; 1 / 2,278,560 ( < 1 % ) ;
+; Block interconnects                  ; 1 / 2,391,360 ( < 1 % ) ;
+; C1 interconnects                     ; 0 / 1,071,360 ( 0 % )   ;
+; C4 interconnects                     ; 0 / 1,049,040 ( 0 % )   ;
+; C8 interconnects                     ; 0 / 104,904 ( 0 % )     ;
+; DCM_muxes                            ; 0 / 456 ( 0 % )         ;
+; DELAY_CHAINs                         ; 0 / 4,306 ( 0 % )       ;
+; Direct links                         ; 0 / 2,391,360 ( 0 % )   ;
+; HIO Buffers                          ; 0 / 31,584 ( 0 % )      ;
+; IO75XDDRFMXCKTREE_CLKDRV_BIG_VCO_REs ; 0 / 16 ( 0 % )          ;
+; IO75XDDRFMXCKTREE_CLKDRV_GM0_REs     ; 0 / 16 ( 0 % )          ;
+; IO75XDDRFMXCKTREE_CLKDRV_VCO_INPUTs  ; 0 / 8 ( 0 % )           ;
+; IO75XDDRFMXCKTREE_CLKDRV_VCO_OUTPUTs ; 0 / 8 ( 0 % )           ;
+; IO75XDDRFMXCKTREE_FB_MUX31_REs       ; 0 / 48 ( 0 % )          ;
+; IOFBRADAPT_C2P_BUF_INPUTs            ; 0 / 132 ( 0 % )         ;
+; IOFBRADAPT_C2P_BUF_OUTPUTs           ; 0 / 132 ( 0 % )         ;
+; IOFBRADAPT_FRZ_BUFS_REs              ; 0 / 616 ( 0 % )         ;
+; IOFBRADAPT_P2C_BUF_INPUTs            ; 0 / 284 ( 0 % )         ;
+; IOFBRADAPT_P2C_BUF_OUTPUTs           ; 0 / 284 ( 0 % )         ;
+; Programmable Invert Buffers          ; 0 / 320 ( 0 % )         ;
+; Programmable Invert Inputs           ; 1 / 214,170 ( < 1 % )   ;
+; Programmable Inverts                 ; 1 / 214,170 ( < 1 % )   ;
+; R0 interconnects                     ; 2 / 1,835,820 ( < 1 % ) ;
+; R1 interconnects                     ; 1 / 1,049,040 ( < 1 % ) ;
+; R12 interconnects                    ; 4 / 157,356 ( < 1 % )   ;
+; R2 interconnects                     ; 0 / 527,340 ( 0 % )     ;
+; R4 interconnects                     ; 1 / 532,980 ( < 1 % )   ;
+; R6 interconnects                     ; 0 / 535,800 ( 0 % )     ;
+; Redundancy Muxes                     ; 0 / 62,248 ( 0 % )      ;
+; Row Clock Tap-Offs                   ; 0 / 157,356 ( 0 % )     ;
+; Switchbox_clock_muxes                ; 0 / 5,120 ( 0 % )       ;
+; VIO Buffers                          ; 1 / 12,800 ( < 1 % )    ;
+; Vertical_seam_tap_muxes              ; 0 / 2,304 ( 0 % )       ;
++--------------------------------------+-------------------------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 26.1.0 Build 110 03/26/2026 SC Pro Edition
+    Info: Processing started: Mon Jul  6 08:24:40 2026
+    Info: System process ID: 9548
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off Assignment1DHL -c Assignment1DHL
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = Assignment1DHL
+Info: Revision = Assignment1DHL
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:00:01
+Info (24604): Global preservation of unused transceiver channels is enabled. All unused transceiver channels will be preserved.
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:01:15
+
+

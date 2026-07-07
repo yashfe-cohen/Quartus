@@ -1,0 +1,9 @@
+Synthesis Status : Successful - Mon Jul  6 08:24:36 2026
+Revision Name : Assignment1DHL
+Top-level Entity Name : Assignment1DHL
+Family : Agilex 5
+Quartus Prime Version : 26.1.0 Build 110 03/26/2026 SC Pro Edition
+Device : A5EC065BB32AE4S
+Logic utilization estimate (in ALMs) : 0 / 222,400 ( 0 % )
+Total dedicated logic registers : 0
+Estimated DSP Blocks Post-Merging : 0
