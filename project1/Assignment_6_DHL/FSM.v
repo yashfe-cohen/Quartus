@@ -1,15 +1,15 @@
 module FSM ( 
     input clk,
     input rstn,
-    input in,
+    input  in,
     output out 
 );
 
-  parameter IDLE  = 0,
-            S1    = 1,
-            S10   = 2,
-            S100  = 3,
-            S1001 = 4;
+  parameter IDLE  = 2'd0,
+            S1    = 2'd1,
+            S10   = 2'd2,
+            S100  = 2'd3,
+            S1001 = 2'd4;
 
   reg [2:0] cur_state, next_state;
 
