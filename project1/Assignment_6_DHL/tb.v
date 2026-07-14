@@ -6,12 +6,12 @@ module tb;
   always #10 clk = ~clk;
 
   FSM u0 ( 
-    .clk(clk), 
-    .rstn(rstn), 
-    .in(in), 
-    .out(out) 
-  );
-
+                                                                    .clk(clk), 
+                                                                    .rstn(rstn), 
+                                                                    .in(in), 
+																						  .out(out) 
+ );
+ 
   initial begin
     clk  = 0;
     rstn = 0;

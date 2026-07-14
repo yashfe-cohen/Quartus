@@ -5,7 +5,7 @@ module FSM (
     output out 
 );
 
-  parameter IDLE  = 2'd0,
+ localparam IDLE  = 2'd0,
             S1    = 2'd1,
             S10   = 2'd2,
             S100  = 2'd3,
