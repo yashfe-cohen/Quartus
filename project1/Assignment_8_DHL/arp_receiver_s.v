@@ -1,10 +1,10 @@
-module arp_receiver  (
+module arp_receiver_s  (
     input clk,
     input rst,             
     input [1:0] data_in,
     input [47:0] my_mac_addr,
-    output reg done_flag,  
-    output reg arp_err     
+    output reg done_flag = 1'd0 ,  
+    output reg arp_err = 1'd0     
 );
 
     // states for fsm 
@@ -46,7 +46,7 @@ module arp_receiver  (
     reg [31:0] tar_ip   = 32'd0; // target ip
     
     // main logic
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk or negedge rst) begin
         if (rst) begin
             curr_state <= ST_IDLE;
             clk_cnt <= 1'b0;
@@ -66,7 +66,7 @@ module arp_receiver  (
                 end
 
                 ST_SKIP: begin
-                    if (clk_cnt == 31) begin  
+                    if (clk_cnt == 5'd31) begin  
                         curr_state <= ST_MAC_DST; // go to next state
                         clk_cnt <= 1'b0; 
                     end else begin
@@ -76,7 +76,7 @@ module arp_receiver  (
 
                 ST_MAC_DST: begin
                     mac_dst <= {mac_dst[45:0], data_in};
-                    if (clk_cnt == 23) begin
+                    if (clk_cnt == 5'd23) begin
                         // my mac or brodcast ?
                         if ({mac_dst[45:0], data_in} != 48'hFFFFFFFFFFFF && {mac_dst[45:0], data_in} != my_mac_addr) begin
                             // silent drop 
@@ -93,7 +93,7 @@ module arp_receiver  (
 
                 ST_MAC_SRC: begin
                     mac_src <= {mac_src[45:0], data_in};
-                    if (clk_cnt == 23) begin
+                    if (clk_cnt == 5'd23) begin
                         curr_state <= ST_ETH_TYP; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -103,7 +103,7 @@ module arp_receiver  (
 
                 ST_ETH_TYP: begin
                     eth_typ <= {eth_typ[13:0], data_in};
-                    if (clk_cnt == 7) begin
+                    if (clk_cnt ==  3'd7) begin
                         // its arp protocol?
                         if ({eth_typ[13:0], data_in} != 16'h0806) begin // check for arp protocol
                             arp_err <= 1'b1;   // dump it, not arp
@@ -120,7 +120,7 @@ module arp_receiver  (
 
                 ST_HW_TYP: begin
                     hw_typ <= {hw_typ[13:0], data_in};
-                    if (clk_cnt == 7) begin
+                    if (clk_cnt == 3'd7) begin
                         // its Ethernet protocol?
                         if ({hw_typ[13:0], data_in} != 16'h0001) begin // check for Hardware Type Ethernet
                             arp_err <= 1'b1;   // dump it, not Ethernet
@@ -137,7 +137,7 @@ module arp_receiver  (
 
                 ST_PROT_TYP: begin
                     prot_typ <= {prot_typ[13:0], data_in};
-                    if (clk_cnt == 7) begin
+                    if (clk_cnt == 3'd7) begin
                         //its IPv4 protocol?
                         if ({prot_typ[13:0], data_in} != 16'h0800) begin // check for IPv4
                             arp_err <= 1'b1;   // dump it, not IPv4
@@ -154,7 +154,7 @@ module arp_receiver  (
 
                 ST_H_SIZE: begin
                     h_size <= {h_size[5:0], data_in};
-                    if (clk_cnt == 3) begin
+                    if (clk_cnt == 2'd3) begin
                         curr_state <= ST_P_SIZE; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -164,7 +164,7 @@ module arp_receiver  (
 
                 ST_P_SIZE: begin
                     p_size <= {p_size[5:0], data_in};
-                    if (clk_cnt == 3) begin
+                    if (clk_cnt == 2'd3) begin
                         curr_state <= ST_OP_CODE; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -174,7 +174,7 @@ module arp_receiver  (
 
                 ST_OP_CODE: begin
                     op_code <= {op_code[13:0], data_in};
-                    if (clk_cnt == 7) begin
+                    if (clk_cnt == 3'd7) begin
                         curr_state <= ST_SND_MAC; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -184,7 +184,7 @@ module arp_receiver  (
 
                 ST_SND_MAC: begin
                     snd_mac <= {snd_mac[45:0], data_in};
-                    if (clk_cnt == 23) begin
+                    if (clk_cnt == 5'd23) begin
                         // check for arp spoofing
                         if ({snd_mac[45:0], data_in} != mac_src) begin 
                             arp_err <= 1'b1;   // dump it, arp spoofing
@@ -201,7 +201,7 @@ module arp_receiver  (
 
                 ST_SND_IP: begin
                     snd_ip <= {snd_ip[29:0], data_in};
-                    if (clk_cnt == 15) begin
+                    if (clk_cnt == 4'd15) begin
                         curr_state <= ST_TAR_MAC; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -211,7 +211,7 @@ module arp_receiver  (
 
                 ST_TAR_MAC: begin
                     tar_mac <= {tar_mac[45:0], data_in};
-                    if (clk_cnt == 23) begin
+                    if (clk_cnt == 5'd23) begin
                         curr_state <= ST_TAR_IP; // next state
                         clk_cnt <= 1'b0;
                     end else begin
@@ -221,7 +221,7 @@ module arp_receiver  (
 
                 ST_TAR_IP: begin
                     tar_ip <= {tar_ip[29:0], data_in};
-                    if (clk_cnt == 15) begin
+                    if (clk_cnt == 4'd15) begin
                         // check if my ip == tar_ip
                         if ({tar_ip[29:0], data_in} == my_ip_addr) begin
                             curr_state <= ST_DONE; 
