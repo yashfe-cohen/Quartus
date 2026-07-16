@@ -24,11 +24,12 @@ module UART_FPGA #(
                                                                .clk(clk),
                                                                .reset(reset),
                                                                .start(start_tx),
-                                                               .data_in(data_to_transmit),
+                                                               .data_in(data_to_transmit),// data to send out
                                                                .tx_out(uart_tx_pin),
+																					
                                                                .rx_in(uart_rx_pin),
                                                                .err(rx_err),
-                                                               .data_out(data_received)
+                                                               .data_out(data_received) // data received from outside
     ); 
 
 endmodule
